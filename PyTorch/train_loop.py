@@ -51,6 +51,8 @@ model = DynamicNet()
 # vanilla stochastic gradient descent is tough, so we use momentum
 criterion = torch.nn.MSELoss(reduction='sum')
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-8, momentum=0.9)
+
+# Start training loop
 for t in range(30000):
     # Forward pass: Compute predicted y by passing x to the model
     y_pred = model(x)
