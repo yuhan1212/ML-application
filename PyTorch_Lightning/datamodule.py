@@ -13,7 +13,7 @@ from pytorch_lightning.utilities.imports import _TORCHVISION_AVAILABLE
 if _TORCHVISION_AVAILABLE:
     from torchvision import transforms as transform_lib
 
-
+# TODO: add other parts to complete this MINST pl example.
 def MNIST(*args, **kwargs):
     torchvision_mnist_available = not bool(os.getenv("PL_USE_MOCKED_MNIST", False))
     if torchvision_mnist_available:
