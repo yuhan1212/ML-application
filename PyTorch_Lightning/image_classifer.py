@@ -16,6 +16,7 @@ from pytorch_lightning.utilities.imports import _TORCHVISION_AVAILABLE
 if _TORCHVISION_AVAILABLE:
     from torchvision import transforms
 
+# This example needs revelant imports to run
 
 class Backbone(torch.nn.Module):
     """
@@ -118,5 +119,3 @@ def cli_main():
 if __name__ == "__main__":
     cli_lightning_logo()
     cli_main()
-© 2021 GitHub, Inc.
-Terms
