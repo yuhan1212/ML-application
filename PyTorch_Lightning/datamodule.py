@@ -1,3 +1,37 @@
+"""
+A datamodule is a shareable, reusable class that encapsulates all the 
+steps needed to process data.
+
+A datamodule encapsulates the five steps involved in data processing 
+in PyTorch:
+
+    Download / tokenize / process.
+
+    Clean and (maybe) save to disk.
+
+    Load inside Dataset.
+
+    Apply transforms (rotate, tokenize, etc…).
+
+    Wrap inside a DataLoader.
+
+
+Why do I need a DataModule?
+In normal PyTorch code, the data cleaning/preparation is usually scattered
+across many files. This makes sharing and reusing the exact splits and
+transforms across projects impossible.
+
+    Datamodules are for you if you ever asked the questions:
+
+    what splits did you use?
+
+    what transforms did you use?
+
+    what normalization did you use?
+
+    how did you prepare/tokenize the data?    
+"""
+
 import os
 import platform
 from typing import Optional
