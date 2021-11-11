@@ -5,15 +5,15 @@ steps needed to process data.
 A datamodule encapsulates the five steps involved in data processing 
 in PyTorch:
 
-    Download / tokenize / process.
+        - Download / tokenize / process.
 
-    Clean and (maybe) save to disk.
+        - Clean and (maybe) save to disk.
 
-    Load inside Dataset.
+        - Load inside Dataset.
 
-    Apply transforms (rotate, tokenize, etc…).
+        - Apply transforms (rotate, tokenize, etc…).
 
-    Wrap inside a DataLoader.
+        - Wrap inside a DataLoader.
 
 
 Why do I need a DataModule?
@@ -23,13 +23,13 @@ transforms across projects impossible.
 
     Datamodules are for you if you ever asked the questions:
 
-    what splits did you use?
+        - what splits did you use?
 
-    what transforms did you use?
+        - what transforms did you use?
 
-    what normalization did you use?
+        - what normalization did you use?
 
-    how did you prepare/tokenize the data?    
+        - how did you prepare/tokenize the data?    
 """
 
 import os
@@ -93,13 +93,6 @@ class MNISTDataModule(LightningDataModule):
             batch_size: desired batch size.
         """
         super().__init__(*args, **kwargs)
-        if num_workers and platform.system() == "Windows":
-            # see: https://stackoverflow.com/a/59680818
-            warn(
-                f"You have requested num_workers={num_workers} on Windows,"
-                " but currently recommended is 0, so we set it for you"
-            )
-            num_workers = 0
 
         self.dims = (1, 28, 28)
         self.data_dir = data_dir
