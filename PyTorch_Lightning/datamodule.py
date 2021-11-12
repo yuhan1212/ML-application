@@ -85,12 +85,12 @@ class MNISTDataModule(LightningDataModule):
     ):
         """
         Args:
-            data_dir: where to save/load the data
-            val_split: how many of the training images to use for the validation split
-            num_workers: how many workers to use for loading data
-            normalize: If true applies image normalize
-            seed: starting seed for RNG.
-            batch_size: desired batch size.
+            data_dir (str): where to save/load the data
+            val_split (int): how many of the training images to use for the validation split
+            num_workers (int): how many workers to use for loading data
+            normalize (bool): If true applies image normalize
+            seed (int): starting seed for RNG.
+            batch_size (int): desired batch size.
         """
         super().__init__(*args, **kwargs)
 
