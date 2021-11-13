@@ -1,5 +1,5 @@
 """MNIST backbone image classifier example.
-To run: python image_classifier.py --trainer.max_epochs=50
+To run: python lit_classifier.py --trainer.max_epochs=50
 """
 from typing import Optional
 
