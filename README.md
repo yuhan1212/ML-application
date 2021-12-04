@@ -1,5 +1,8 @@
 # ML-application
 
+## JAX
+
+This folder contains the applications and examples of Jax lib/framework.
 
 ## PyTorch
 
