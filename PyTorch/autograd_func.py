@@ -32,8 +32,8 @@ class LegendrePolynomial3(torch.autograd.Function):
 
 
 dtype = torch.float
-device = torch.device("cpu")
-# device = torch.device("cuda:0")  # Uncomment this to run on GPU
+# device = torch.device("cpu")
+device = torch.device("cuda:0")
 
 # Create Tensors to hold input and outputs.
 # By default, requires_grad=False, which indicates that we do not need to
