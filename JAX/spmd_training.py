@@ -1,4 +1,4 @@
-"""An MNIST example with single-program multiple-data (SPMD) data parallelism.
+"""An MNIST example with single-program multiple-data (SPMD) training parallelism.
 The aim here is to illustrate how to use JAX's `pmap` to express and execute
 SPMD programs for data parallelism along a batch dimension, while also
 minimizing dependencies by avoiding the use of higher-level layers and
@@ -63,6 +63,7 @@ if __name__ == "__main__":
   # For this manual SPMD example, we get the number of devices (e.g. GPUs or
   # TPU cores) that we're using, and use it to reshape data minibatches.
   num_devices = jax.device_count()
+
   def data_stream():
     rng = npr.RandomState(0)
     while True:
@@ -108,6 +109,7 @@ if __name__ == "__main__":
     params = tree_map(lambda x: x[0], replicated_params)
     train_acc = accuracy(params, (train_images, train_labels))
     test_acc = accuracy(params, (test_images, test_labels))
+    
     print("Epoch {} in {:0.2f} sec".format(epoch, epoch_time))
     print("Training set accuracy {}".format(train_acc))
     print("Test set accuracy {}".format(test_acc))
