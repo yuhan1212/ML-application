@@ -1,0 +1,1 @@
+grid run --instance_type v100 --gpus 4 my_model.py --gpus 4 --learning_rate 'uniform(1e-6, 1e-1, 20)' --layers '[2, 4, 8, 16]'
