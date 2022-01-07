@@ -112,6 +112,8 @@ for var_name in optimizer.state_dict():
     print(var_name, "\t", optimizer.state_dict()[var_name])
 
 
+
+
 ######################################################################
 # This information is relevant for saving and loading the model and
 # optimizers for future use.
