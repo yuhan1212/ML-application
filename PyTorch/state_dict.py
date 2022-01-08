@@ -112,7 +112,23 @@ for var_name in optimizer.state_dict():
     print(var_name, "\t", optimizer.state_dict()[var_name])
 
 
+"""
+Model's state_dict:
+conv1.weight 	 torch.Size([6, 3, 5, 5])
+conv1.bias 	 torch.Size([6])
+conv2.weight 	 torch.Size([16, 6, 5, 5])
+conv2.bias 	 torch.Size([16])
+fc1.weight 	 torch.Size([120, 400])
+fc1.bias 	 torch.Size([120])
+fc2.weight 	 torch.Size([84, 120])
+fc2.bias 	 torch.Size([84])
+fc3.weight 	 torch.Size([10, 84])
+fc3.bias 	 torch.Size([10])
 
+Optimizer's state_dict:
+state 	 {}
+param_groups 	 [{'lr': 0.001, 'momentum': 0.9, 'dampening': 0, 'weight_decay': 0, 'nesterov': False, 'params': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}]
+"""
 
 ######################################################################
 # This information is relevant for saving and loading the model and
