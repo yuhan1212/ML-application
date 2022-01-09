@@ -7,6 +7,7 @@ In PyTorch, the learnable parameters (i.e. weights and biases) of a
 Python dictionary object that maps each layer to its parameter tensor.
 Introduction
 ------------
+
 A ``state_dict`` is an integral entity if you are interested in saving
 or loading models from PyTorch.
 Because ``state_dict`` objects are Python dictionaries, they can be
@@ -36,7 +37,7 @@ available.
 # 1. Import all necessary libraries for loading our data
 # 2. Define and intialize the neural network
 # 3. Initialize the optimizer
-# 4. Access the model and optimizer ``state_dict``
+# 4. Access the model and optimizer ``state_dict`` (Key in this example)
 # 
 # 1. Import necessary libraries for loading our data
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,10 +105,8 @@ print("Model's state_dict:")
 for param_tensor in net.state_dict():
     print(param_tensor, "\t", net.state_dict()[param_tensor].size())
 
-print()
-
 # Print optimizer's state_dict
-print("Optimizer's state_dict:")
+print("\nOptimizer's state_dict:")
 for var_name in optimizer.state_dict():
     print(var_name, "\t", optimizer.state_dict()[var_name])
 
