@@ -75,7 +75,7 @@ class TestLoop(Loop):
     def done(self) -> bool:
         return False
 
-    def reset(self):
+    def reset(self) -> None:
         self.dataloader_iter = enumerate(self.dataloader)
         self.test_loss = 0
         self.accuracy.reset()
@@ -109,7 +109,7 @@ class MainLoop(Loop):
     def done(self) -> bool:
         return self.epoch >= self.args.epochs
 
-    def reset(self):
+    def reset(self) -> None:
         pass
 
     def advance(self, *args: Any, **kwargs: Any) -> None:
