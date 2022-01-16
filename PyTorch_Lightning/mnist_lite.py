@@ -55,7 +55,7 @@ class TrainLoop(Loop):
         if self.args.dry_run:
             raise StopIteration
 
-    def on_run_end(self):
+    def on_run_end(self) -> None:
         self.scheduler.step()
         self.dataloader_iter = None
 
