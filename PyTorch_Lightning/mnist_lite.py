@@ -76,6 +76,7 @@ class TestLoop(Loop):
         return False
 
     def reset(self) -> None:
+        print("Restting the Test Loop.")
         self.dataloader_iter = enumerate(self.dataloader)
         self.test_loss = 0
         self.accuracy.reset()
