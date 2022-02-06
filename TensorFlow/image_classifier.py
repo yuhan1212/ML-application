@@ -257,7 +257,7 @@ keras.utils.plot_model(model, show_shapes=True)
 ## Train the model
 """
 
-epochs = 50
+epochs = 10
 
 callbacks = [
     keras.callbacks.ModelCheckpoint("save_at_{epoch}.h5"),
