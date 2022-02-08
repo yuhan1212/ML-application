@@ -273,6 +273,7 @@ model.fit(
 
 """
 We get to ~96% validation accuracy after training for 50 epochs on the full dataset.
+TODO: update the validation accuracy
 """
 
 """
