@@ -2,8 +2,9 @@ import torch
 import math
 
 dtype = torch.float
-# device = torch.device("cpu")  # Uncomment this to run on CPU
-device = torch.device("cuda:0")  
+
+device = torch.device("cpu")  # To run on CPU
+# device = torch.device("cuda:0")  # Uncomment this to run on GPU
 
 # Create Tensors to hold input and outputs.
 # By default, requires_grad=False, which indicates that we do not need to
