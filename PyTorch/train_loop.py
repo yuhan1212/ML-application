@@ -60,7 +60,7 @@ for t in range(30000):
     # Compute and print loss
     loss = criterion(y_pred, y)
     if t % 2000 == 1999:
-        print(t, loss.item())
+        print(f"step: {t}, loss: {loss.item()})
 
     # Zero gradients, perform a backward pass, and update the weights.
     optimizer.zero_grad()
