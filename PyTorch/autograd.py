@@ -31,7 +31,7 @@ for t in range(2000):
     # loss.item() gets the scalar value held in the loss.
     loss = (y_pred - y).pow(2).sum()
     if t % 100 == 99:
-        print(t, loss.item())
+        print(f"step: {t}, loss: {loss.item()}")
 
     # Use autograd to compute the backward pass. This call will compute the
     # gradient of loss with respect to all Tensors with requires_grad=True.
