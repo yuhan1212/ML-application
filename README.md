@@ -12,8 +12,6 @@ It also has some classifier notebooks that we can train image classifier.
 
 ## PyTorch_Lightning
 
-TODO: Add the PyTorch Lightning Trainer 
-
 TODO: Trainer fit with model and data module 
 
 TODO: Add the PyTorch Lightning DataModule
