@@ -10,17 +10,18 @@ print(f"Ones Tensor: \n {ones_tensor} \n")
 print(f"Zeros Tensor: \n {zeros_tensor}")
 
 """
+Output: 
 
-Random Tensor:
- tensor([[0.0034, 0.3447, 0.5966],
-        [0.9442, 0.1058, 0.2222]])
+  Random Tensor:
+   tensor([[0.0034, 0.3447, 0.5966],
+          [0.9442, 0.1058, 0.2222]])
 
-Ones Tensor:
- tensor([[1., 1., 1.],
-        [1., 1., 1.]])
+  Ones Tensor:
+   tensor([[1., 1., 1.],
+          [1., 1., 1.]])
 
-Zeros Tensor:
- tensor([[0., 0., 0.],
-        [0., 0., 0.]])
+  Zeros Tensor:
+   tensor([[0., 0., 0.],
+          [0., 0., 0.]])
         
 """
