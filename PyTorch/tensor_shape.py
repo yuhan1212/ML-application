@@ -31,3 +31,11 @@ tensor = torch.rand(3,4)
 print(f"Shape of tensor: {tensor.shape}")
 print(f"Datatype of tensor: {tensor.dtype}")
 print(f"Device tensor is stored on: {tensor.device}")
+
+"""
+
+Shape of tensor: torch.Size([3, 4])
+Datatype of tensor: torch.float32
+Device tensor is stored on: cpu
+
+"""
